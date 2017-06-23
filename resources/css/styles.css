@@ -1,0 +1,295 @@
+html,
+body {
+  font-size: 18px;
+  font-family: Helvetica;
+}
+
+/* Company Header + Logo */
+.header {
+  display: inline-flex;
+  flex-wrap: wrap;
+  background-color: black;
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 960px;
+  background-color: black;
+  height: auto;
+  font-size: 1rem;
+}
+
+.container img {
+  height: 1rem;
+  margin: auto 1rem auto 0.5rem;
+}
+
+.container p {
+  color: white;
+  text-transform: uppercase;
+  margin-top: 0.66rem;
+  margin-bottom: 0.66rem;
+}
+
+
+/*Main Banner */
+
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url('../media/moto.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25rem;
+  width: 100%;
+}
+
+.banner .message {
+  width: 960px;
+  margin-top: 9rem;
+  margin-bottom: 20rem;
+}
+
+.banner .message .text {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  width: 20rem;
+  padding-top: 2rem;
+  padding-left: 3rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .message .text p {
+  font-weight: bold;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+}
+.banner .message .text h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Navigation Bar */
+.nav-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: firebrick;
+  justify-content: center;
+
+}
+nav {
+  display: inline-flex;
+  background-color: firebrick;
+  width: 960px;
+  height: auto;
+  justify-content: space-between;
+}
+
+ul.regular {
+  display: inline-flex;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  width: 100%;
+  color: white;
+}
+
+.regular li {
+  color: white;
+  list-style: none;
+}
+
+ul.mobile-nav {
+  display: none
+}
+
+.mobile-nav li {
+  display: none;
+}
+
+/* Main Container */
+.main-container {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+/* Products */
+.products,
+.business {
+  display: flex;
+  width: 960px;
+  justify-content: space-between;
+}
+
+.product-pen,
+.product-watch,
+.product-glasses {
+  display: flex;
+  flex-flow: column wrap;
+  border: 4px solid black;
+  margin-top: 3rem;
+  width: 30%;
+}
+
+.product-pen img,
+.product-watch img,
+.product-glasses img {
+  height: 9rem;
+  max-width: 8rem;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.product-pen p,
+.product-watch p,
+.product-glasses p {
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  width: auto;
+}
+
+/*Business Info - Location & Hours */
+.location {
+  width: 35%;
+  margin-top: 3rem;
+}
+
+h3 {
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.location p {
+  padding-left: 2rem;
+}
+
+/*Footer */
+footer {
+  display: flex;
+  position: static;
+  background-color: black;
+  height: 7rem;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .foot {
+  width: 960px;
+  background-color: black;
+  color: white;
+  text-align: left;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+@media only screen and (max-width: 1024px)   {
+  .regular li {
+    display: none;
+  }
+
+  ul.mobile-nav {
+    display: block;
+    justify-content: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    width: 100%;
+  }
+
+  .mobile-nav li {
+    display: block;
+    color: white;
+  }
+
+  .products {
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  .product-pen,
+  .product-watch {
+    width: 47%;
+  }
+  .product-glasses {
+    display: none;
+  }
+
+  .main-container {
+    margin-bottom: 4rem;
+  }
+}
+
+/* SMARTPHONE */
+@media only screen and (max-width: 470px) {
+
+  .banner {
+    height: 15rem;
+  }
+
+  .banner .message {
+    width: 100%;
+    margin-top: 10rem;
+    margin-bottom: auto;
+  }
+
+  .banner .message .text {
+    width: 100%;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .banner .message .text p {
+    font-size: 0.77rem;
+  }
+  .banner .message .text h1 {
+    font-size: 1rem;
+  }
+
+  .products {
+    justify-content: center;
+  }
+  .product-pen {
+    width: 90%;
+  }
+  .product-watch {
+    display: none;
+  }
+
+.business {
+  display: block;
+  padding-top: 3rem;
+
+}
+  .location {
+    margin: 0 auto;
+    width: 90%;
+    padding-bottom: 0.35rem;
+  }
+
+.location h3 {
+  margin-bottom: 0.35rem;
+}
+
+footer {
+  height: 7rem;
+  width: 100%;
+  align-items: center;
+}
+
+footer .foot {
+  text-align: center;
+}
